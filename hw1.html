@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             font-weight: bold;
             /* Setting a default background, which will be overwritten by JS based on the browser */
-            background: linear-gradient(45deg, #fde073, #f9d342, #ff7f50, #ff69b4, #f8f8ff);
+            background: linear-gradient(45deg, #000000, #666666, #979797, #eeeeee, #0088cc);
             margin: 0;
             display: flex;
             justify-content: center;
@@ -31,7 +31,10 @@
             document.body.style.background = 'linear-gradient(45deg, #fde073, #f9d342, #ff7f50, #ff69b4, #f8f8ff)';
         } else if (userAgent.includes('Chrome') && !userAgent.includes('Chromium')) {
             greeting = 'Hello Chrome';
-            document.body.style.background = 'linear-gradient(45deg, #007BFF, #28a745, #dc3545, #fde073, #f8f8ff)'; // blue, green, red, white
+            document.body.style.background = 'linear-gradient(45deg, #007BFF, #28a745, #dc3545, #fde073, #f8f8ff)';
+        } else if (userAgent.includes('Safari')) {
+            greeting = 'Hello Safari';
+            document.body.style.background = 'linear-gradient(45deg, #000000, #666666, #979797, #eeeeee, #0088cc)';
         }
 
         // Display the greeting
