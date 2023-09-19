@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edgio - Functions-Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            /* Setting a default background, which will be overwritten by JS based on the browser */
+            background: linear-gradient(45deg, #fde073, #f9d342, #ff7f50, #ff69b4, #f8f8ff);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #f8f8ff;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    function greetUserBasedOnAgent() {
+        const userAgent = navigator.userAgent;
+
+        let greeting = 'Hello World';  // default message
+        if (userAgent.includes('Firefox')) {
+            greeting = 'Hello Firefox';
+            document.body.style.background = 'linear-gradient(45deg, #fde073, #f9d342, #ff7f50, #ff69b4, #f8f8ff)';
+        } else if (userAgent.includes('Chrome') && !userAgent.includes('Chromium')) {
+            greeting = 'Hello Chrome';
+            document.body.style.background = 'linear-gradient(45deg, #007BFF, #28a745, #dc3545, #fde073, #f8f8ff)'; // blue, green, red, white
+        }
+
+        // Display the greeting
+        document.body.innerHTML = `<h1>${greeting}</h1>`;
+    }
+
+    // Call the function once the page has loaded
+    window.onload = greetUserBasedOnAgent;
+</script>
+
+</body>
+</html>
