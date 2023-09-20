@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "edgio:dev": "edgio dev",
+    "edgio:build": "edgio build",
+    "edgio:deploy": "edgio deploy"
+  },
+  "devDependencies": {
+    "@edgio/cli": "^7.2.5",
+    "@edgio/core": "^7.2.5",
+    "@edgio/devtools": "^7.2.5",
+    "@edgio/nodejs-connector": "^7.2.5",
+    "@edgio/prefetch": "^7.2.5"
+  }
+}
